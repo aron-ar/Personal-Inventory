@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Inventory</title>
+</head>
+<body>
+	<header>
+		<h1>Personal Inventory</h1>
+		<nav aria-label="Main navigation">
+			<ul>
+				<li><a href="addItem.html">Add Item</a></li>
+				<li><a href="settings.html">Settings</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section aria-labelledby="inventory-heading">
+			<h2 id="inventory-heading">Inventory</h2>
+			<label for="inventory-search">Search your inventory</label>
+			<input type="search" id="inventory-search" name="search">
+
+			<ul>
+				<li>
+					<article>
+                        <img src="" alt="image1">
+						<h3>Cordless Drill</h3>
+						<dl>
+							<dt>Category</dt>
+							<dd>Tools</dd>
+							<dt>Location</dt>
+							<dd>Garage → Shelf 2</dd>
+						</dl>
+					</article>
+				</li>
+				<li>
+					<article>
+                        <img src="" alt="image2">
+						<h3>Board Game</h3>
+						<dl>
+							<dt>Category</dt>
+							<dd>Games</dd>
+							<dt>Location</dt>
+							<dd>Storage → Box A</dd>
+						</dl>
+					</article>
+				</li>
+			</ul>
+		</section>
+
+		<section aria-labelledby="no-results-heading">
+			<h2 id="no-results-heading">No search results</h2>
+			<p>No matching item found in your inventory.</p>
+			<p>You can continue with your purchase decision.</p>
+		</section>
+	</main>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Details</title>
+</head>
+<body>
+	<main>
+		<h1>Edit Item</h1>
+
+		<form>
+			<div>
+				<label for="item-name">Item name *</label>
+				<input type="text" id="item-name" name="item-name" value="Cordless Drill" required>
+			</div>
+
+			<div>
+				<label for="category">Category *</label>
+				<select id="category" name="category" required>
+					<option value="">-- Select --</option>
+					<option value="tools" selected>Tools</option>
+					<option value="games">Games</option>
+					<option value="kitchen">Kitchen</option>
+				</select>
+			</div>
+
+			<fieldset>
+				<legend>Storage location</legend>
+				<div>
+					<label for="location-level-1">Level 1 *</label>
+					<select id="location-level-1" name="location-level-1" required>
+						<option value="">-- Select --</option>
+						<option value="home" selected>Home</option>
+						<option value="office">Office</option>
+					</select>
+				</div>
+				<div>
+					<label for="location-level-2">Level 2 (under Level 1) *</label>
+					<select id="location-level-2" name="location-level-2" required>
+						<option value="">-- Select --</option>
+						<option value="garage" selected>Garage</option>
+						<option value="storage-room">Storage Room</option>
+					</select>
+				</div>
+			</fieldset>
+
+			<div>
+				<label for="usage-frequency">How often used</label>
+				<select id="usage-frequency" name="usage-frequency" required>
+					<option value="">-- Select --</option>
+					<option value="daily">Daily</option>
+					<option value="weekly">Weekly</option>
+					<option value="monthly">Monthly</option>
+					<option value="occasionally" selected>Occasionally</option>
+					<option value="rarely">Rarely</option>
+					<option value="never">Never</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="condition">Condition</label>
+				<select id="condition" name="condition" required>
+					<option value="">-- Select --</option>
+					<option value="new" selected>New</option>
+					<option value="good">Good</option>
+					<option value="fair">Fair</option>
+					<option value="poor">Poor</option>
+					<option value="broken">Broken</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="quantity">Quantity</label>
+				<input type="number" id="quantity" name="quantity" min="0" step="1" value="1">
+			</div>
+
+			<div>
+				<label for="unit-of-measure">Unit of Measure</label>
+				<select id="unit-of-measure" name="unit-of-measure" required>
+					<option value="UN" selected>UN</option>
+					<option value="kg">kg</option>
+					<option value="g">g</option>
+					<option value="L">L</option>
+					<option value="m">m</option>
+				</select>
+			</div>
+
+			<fieldset>
+				<legend>Decision</legend>
+				<div>
+					<input type="radio" id="decision-keep" name="decision" value="keep">
+					<label for="decision-keep">Keep</label>
+				</div>
+				<div>
+					<input type="radio" id="decision-sell" name="decision" value="sell" checked>
+					<label for="decision-sell">Sell</label>
+				</div>
+				<div>
+					<input type="radio" id="decision-donate" name="decision" value="donate">
+					<label for="decision-donate">Donate</label>
+				</div>
+				<div>
+					<input type="radio" id="decision-discard" name="decision" value="discard">
+					<label for="decision-discard">Discard</label>
+					</div>
+			</fieldset>
+
+			<button type="reset">Cancel</button>
+			<button type="submit">Save Changes</button>
+		</form>
+	</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings / Categories</title>
+</head>
+<body>
+  <header>
+    <h1>Categories</h1>
+    <p>Maintain the categories used to organize inventory items.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="category-list-heading">
+      <h2 id="category-list-heading">Item categories</h2>
+      <button type="button">Add Category</button>
+
+      <table>
+        <!--<caption>Categories and their current status</caption>-->
+        <thead>
+          <tr>
+            <th scope="col">Category name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Active/Inactive</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Tools</th>
+            <td>
+                <button type="button" aria-label="Edit">Edit</button>
+            </td>
+            <td>
+                <input type="checkbox" id="ActDeact" name="ActDeact" value="yes">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Games</th>
+            <td>
+                <button type="button" aria-label="Edit">Edit</button>
+            </td>
+            <td>
+              <input type="checkbox" id="ActDeact" name="ActDeact" value="yes">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Electronics</th>
+            <td>
+                <button type="button" aria-label="Edit">Edit</button>
+            </td>
+            <td>
+              <input type="checkbox" id="ActDeact" name="ActDeact" value="yes">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Kitchen</th>
+            <td>
+                <button type="button" aria-label="Edit">Edit</button>
+            </td>
+            <td>
+              <input type="checkbox" id="ActDeact" name="ActDeact" value="yes">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <nav aria-label="Category settings navigation">
+      <button type="button">Cancel</button>
+      <button type="button">Save Changes</button>
+    </nav>
+  </main>
+</body>
+</html>

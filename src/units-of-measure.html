@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings / Units of Measure</title>
+</head>
+
+<body>
+  <header>
+    <h1>Settings / Units of Measure</h1>
+    <p>View predefined units and manage your custom units.</p>
+  </header>
+
+  <main>
+    <form>
+
+      <section aria-labelledby="predefined-heading">
+        <h3 id="predefined-heading">Predefined Units</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>psc</td>
+            </tr>
+            <tr>
+              <td>kg</td>
+            </tr>
+            <tr>
+              <td>g</td>
+            </tr>
+            <tr>
+              <td>L</td>
+            </tr>
+            <tr>
+              <td>m</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Predefined units cannot be modified.</p>
+      </section>
+
+      <section aria-labelledby="custom-heading">
+        <h3 id="custom-heading">Custom Units</h3>
+        <button type="button">Add Custom Unit</button>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Custom Units</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>box</td>
+              <td><button type="button" aria-label="Edit box">Edit</button></td>
+            </tr>
+            <tr>
+              <td>pack</td>
+              <td><button type="button" aria-label="Edit pack">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+
+      <footer>
+        <button type="button">Cancel</button>
+        <button type="button">Save Changes</button>
+      </footer>
+    </form>
+  </main>
+</body>
+</html>

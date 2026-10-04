@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings / Storage Locations</title>
+</head>
+<body>
+  <header>
+    <h1>Settings / Storage Locations</h1>
+    <p>Manage your Level 1 and Level 2 storage locations.</p>
+  </header>
+
+  <main>
+    <form>
+      <section aria-labelledby="level-1-heading">
+        <header>
+          <h2 id="level-1-heading">Level 1 locations</h2>
+          <p>These are the primary places where you store items.</p>
+          <button type="button">Add Location</button>
+        </header>
+
+        <table>
+          <caption>Level 1 storage locations</caption>
+          <thead>
+            <tr>
+              <th scope="col">Level 1</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Active/Inactive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Home</th>
+              <td>
+                <button type="button" aria-label="Edit Home">Edit</button>
+              </td>
+              <td>
+                <input type="checkbox" id="ActDeact" name="ActDeact" value="yes">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Office</th>
+              <td>
+                <button type="button" aria-label="Edit Home">Edit</button>
+              </td>
+              <td>
+                <input type="checkbox" id="ActDeact2" name="ActDeact2" value="yes">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="level-2-heading">
+        <header>
+          <h2 id="level-2-heading">Level 2 locations</h2>
+          <p>Each Level 2 location belongs to one Level 1 location.</p>
+          <button type="button">Add Level 2</button>
+        </header>
+
+        <table>
+          <caption>Level 2 storage locations</caption>
+          <thead>
+            <tr>
+              <th scope="col">Level 2</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Active/Inactive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Garage</th>
+              <td>
+                <button type="button" aria-label="Edit Garage">Edit</button>
+              </td>
+              <td>
+                <input type="checkbox" id="ActDeact" name="ActDeact" value="yes">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Storage Room</th>
+              <td>
+                <button type="button" aria-label="Edit Storage Room">Edit</button>
+              </td>
+              <td>
+                <input type="checkbox" id="ActDeact2" name="ActDeact2" value="yes">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer>
+        <button type="reset">Cancel</button>
+        <button type="submit">Save Changes</button>
+      </footer>
+    </form>
+  </main>
+</body>
+</html>
