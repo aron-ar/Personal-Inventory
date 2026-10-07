@@ -1,0 +1,395 @@
+/* ========================================
+   1. RESET & BASE
+======================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background-color: #f5f5f5;
+}
+
+/* ========================================
+   2. TYPOGRAPHY
+======================================== */
+h1, h2, h3 {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   3. LAYOUT CONTAINER
+======================================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* ========================================
+   4. HEADER
+======================================== */
+header {
+  background-color: #e5e5e5;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* ========================================
+   5. BUTTONS
+======================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.1rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: #111;
+  transition: background-color 0.15s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+.btn-secondary {
+  background-color: #e5e5e5;
+  color: #111;
+}
+
+.btn-secondary:hover {
+  background-color: #d4d4d4;
+}
+
+.btn-danger {
+  background-color: #e11d48;
+}
+
+.btn-danger:hover {
+  background-color: #be123c;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* Decision pills */
+.decision-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.decision-btn {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background-color: #e5e5e5;
+  color: #555;
+}
+
+.decision-btn.active,
+.decision-btn[aria-pressed="true"] {
+  background-color: #333;
+  color: white;
+}
+
+/* ========================================
+   6. SEARCH
+======================================== */
+.search-box {
+  margin: 1.5rem 0;
+}
+
+.search-box input[type="search"] {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #222;
+  border-radius: 6px;
+  background: white;
+}
+
+.search-box input:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 1px;
+}
+
+/* ========================================
+   7. ITEM CARDS (Grid)
+======================================== */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.item-card {
+  background-color: #e8e8e8;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.item-card img {
+  width: 100%;
+  max-width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: white;
+}
+
+.item-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.item-card .category {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.item-card .location {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Warning state (Items Requiring Update) */
+.item-card.warning {
+  background-color: #fecaca;
+}
+
+/* ========================================
+   8. FORMS (Add / Edit Item)
+======================================== */
+.form-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  border: 1.5px solid #222;
+  border-radius: 6px;
+  background: white;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row > * {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Photo placeholder */
+.photo-upload {
+  width: 160px;
+  height: 160px;
+  background: #e5e5e5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.9rem;
+  border: 2px dashed #bbb;
+}
+
+/* ========================================
+   9. ITEM DETAILS
+======================================== */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.details-grid dl {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.75rem 1rem;
+}
+
+.details-grid dt {
+  font-weight: 600;
+  color: #555;
+}
+
+.details-grid dd {
+  margin: 0;
+}
+
+/* ========================================
+   10. SETTINGS PAGES
+======================================== */
+.settings-nav {
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+.settings-card {
+  display: block;
+  background: white;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.settings-card:hover {
+  background: #f0f0f0;
+}
+
+.settings-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Tables in Categories / Locations / Units */
+.config-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.config-table th,
+.config-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.config-table th {
+  background: #f8f8f8;
+  font-weight: 600;
+}
+
+/* ========================================
+   11. EMPTY / NO RESULTS STATE
+======================================== */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: white;
+  border-radius: 12px;
+  max-width: 420px;
+  margin: 2rem auto;
+  border: 1px solid #ddd;
+}
+
+.empty-state p {
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+/* ========================================
+   12. RESPONSIVE
+======================================== */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .header-actions .btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .decision-group {
+    justify-content: center;
+  }
+}
