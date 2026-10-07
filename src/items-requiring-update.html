@@ -1,54 +1,44 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Items Requiring Update</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 	<header>
+		<h1>Items Requiring Update</h1>
+		<!-- <p>These items use an inactive category or storage location. Review each item and update its information yourself.</p> -->
 		<nav aria-label="Back navigation">
 			<a href="Inventory.html">Back</a>
 		</nav>
-		<h1>Items Requiring Update</h1>
-		<p>These items use an inactive category or storage location. Review each item and update its information yourself.</p>
 	</header>
 
 	<main>
 		<section aria-labelledby="affected-items-heading">
 			<h2 id="affected-items-heading">Affected items</h2>
-			<ul>
-				<li>
-					<article aria-labelledby="handsaw-name">
-                        <img src="" alt="image1">
-						<h3 id="handsaw-name">Handsaw</h3>
-						<p><strong>Requires information update</strong></p>
-						<dl>
-							<dt>Category</dt>
-							<dd>Tools</dd>
-							<dt>Storage location</dt>
-							<dd>Home → Penthouse</dd>
-						</dl>
-						<a href="edit-item.html" class="button" aria-label="Update item: Handsaw">Update Item</a>
-					</article>
-				</li>
-				<li>
-					<article aria-labelledby="board-game-name">
-                        <img src="" alt="image2">
-						<h3 id="board-game-name">Board Game</h3>
-						<p><strong>Requires information update</strong></p>
-						<dl>
-							<dt>Category</dt>
-							<dd>Games</dd>
-							<dt>Storage location</dt>
-							<dd>Office → Box A</dd>
-						</dl>
-						<a href="edit-item.html" class="button" aria-label="Update item: Board Game">Update Item</a>
-					</article>
-				</li>
-			</ul>
+			<div>
+				<article aria-labelledby="handsaw-name">
+					<img src="" alt="image1">
+					<h3 id="handsaw-name">Handsaw</h3>
+					<p>Category: Tools</p>
+					<p>Location: Home → Penthouse</p>
+					<button type="button">Update</button>
+				</article>
+
+				<article aria-labelledby="board-game-name">
+					<img src="" alt="image2">
+					<h3 id="board-game-name">Board Game</h3>
+					<p>Category: Games</p>
+					<p>Location: Office → Box A</p>
+					<button type="button">Update</button>
+				</article>
+			</div>
 		</section>
 	</main>
 </body>
+
 </html>

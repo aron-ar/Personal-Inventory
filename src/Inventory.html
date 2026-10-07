@@ -1,62 +1,62 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Personal Inventory</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 	<header>
 		<h1>Personal Inventory</h1>
 		<nav aria-label="Main navigation">
-			<ul>
-				<li><a href="addItem.html">Add Item</a></li>
-				<li><a href="settings.html">Settings</a></li>
-			</ul>
+			<a href="add-item.html">Add Item</a>
+			<a href="settings.html">Settings</a>
 		</nav>
 	</header>
 
 	<main>
-		<section aria-labelledby="inventory-heading">
-			<h2 id="inventory-heading">Inventory</h2>
-			<label for="inventory-search">Search your inventory</label>
-			<input type="search" id="inventory-search" name="search" placeholder="e.g. Cordless Drill" aria-describedby="search-help">
+		<section class="search">
+			<div class="form-field">
+				<form>
+					<fieldset>
+						<legend>Search your inventory</legend>
+						<input type="search" id="inventory-search" name="search" placeholder="e.g. Cordless Drill">
+					</fieldset>
+				</form>
+			</div>
 
-			<ul>
-				<li>
-					<article>
-                        <img src="" alt="image1">
-						<h3>Cordless Drill</h3>
-						<dl>
-							<dt>Category</dt>
-							<dd>Tools</dd>
-							<dt>Location</dt>
-							<dd>Garage → Shelf 2</dd>
-						</dl>
-					</article>
-				</li>
-				<li>
-					<article>
-                        <img src="" alt="image2">
-						<h3>Board Game</h3>
-						<dl>
-							<dt>Category</dt>
-							<dd>Games</dd>
-							<dt>Location</dt>
-							<dd>Storage → Box A</dd>
-						</dl>
-					</article>
-				</li>
-			</ul>
 		</section>
 
-		<section aria-labelledby="no-results-heading">
+		<section>
+			<h1 id="inventory-heading">Your items</h1>
+			<div class="items-grid">
+				<article class="item-card">
+					<img src="https://www.bosch-pt.co.in/in/en/ocsmedia/329898-54/application-image/1434x828/cordless-drill-driver-pro-gsr-12v-30-06019g9082.png" alt="image1">
+					<h3>Cordless Drill</h3>
+					<p>Category: Tools</p>
+					<p>Location: Garage → Shelf 2</p>
+					<button type="button">Detail</button>
+				</article>
+
+				<article class="item-card">
+					<img src="https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/8436017220100-1200-face3d.jpg" alt="image2">
+					<h3>Board Game</h3>
+					<p>Category: Games</p>
+					<p>Location: Storage → Box A</p>
+					<button type="button">Detail</button>
+				</article>
+			</div>
+		</section>
+
+		<!--<section>
 			<h2 id="no-results-heading">No search results</h2>
 			<p>No matching item found in your inventory.</p>
 			<p>You can continue with your purchase decision.</p>
-		</section>
-		<label for="inventory-search">Search your inventory</label>
+		</section>-->
 	</main>
 </body>
+
 </html>

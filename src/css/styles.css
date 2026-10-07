@@ -1,6 +1,3 @@
-/* ========================================
-   1. RESET & BASE
-======================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,42 +12,55 @@ body {
   background-color: #f5f5f5;
 }
 
-/* ========================================
-   2. TYPOGRAPHY
-======================================== */
 h1, h2, h3 {
   margin-top: 0;
-  font-weight: 700;
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
 }
 
 h2 {
-  font-size: 1.35rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
-/* ========================================
-   3. LAYOUT CONTAINER
-======================================== */
-.container {
+h3 {
+    margin-bottom: 0.5rem;
+}
+
+/*.container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1.5rem 1rem;
-}
+}*/
 
-/* ========================================
-   4. HEADER
-======================================== */
 header {
   background-color: #e5e5e5;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #d0d0d0;
+}
+
+main {
+max-width: 1100px;
+margin: 0 auto;
+padding: 2rem 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  background-color: #000;
+  color: white;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: #5c5c5c;
+  color: white;
 }
 
 header h1 {
@@ -58,10 +68,107 @@ header h1 {
   font-weight: 700;
 }
 
-.header-actions {
-  display: flex;
-  gap: 0.75rem;
+.search {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+legend {
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    font: inherit;
+    border: none;
+    border-radius: 6px;
+}
+
+button {
+    padding: 0.5rem 0.5rem;
+    font: inherit;
+    font-weight: 400;
+    color: white;
+    background-color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #5c5c5c;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.item-card {
+  background-color: #e8e8e8;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.item-card img {
+  width: 100%;
+  max-width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: white;
+}
+
+.item-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.item-card p {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+
+/* Warning state (Items Requiring Update) */
+.item-card.warning {
+  background-color: #fecaca;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ========================================
    5. BUTTONS
@@ -155,62 +262,6 @@ header h1 {
   outline-offset: 1px;
 }
 
-/* ========================================
-   7. ITEM CARDS (Grid)
-======================================== */
-.items-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-
-.item-card {
-  background-color: #e8e8e8;
-  border-radius: 12px;
-  padding: 1.25rem;
-  text-align: center;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.item-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-
-.item-card img {
-  width: 100%;
-  max-width: 140px;
-  height: 140px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  background: white;
-}
-
-.item-card h3 {
-  font-size: 1rem;
-  margin-bottom: 0.35rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.item-card .category {
-  font-size: 0.85rem;
-  color: #555;
-  margin-bottom: 0.25rem;
-}
-
-.item-card .location {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Warning state (Items Requiring Update) */
-.item-card.warning {
-  background-color: #fecaca;
-}
 
 /* ========================================
    8. FORMS (Add / Edit Item)
